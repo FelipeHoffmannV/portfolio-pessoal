@@ -1,0 +1,575 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+.header-bg-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.header-bg-wrapper img{
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+}
+
+.header-titulo{
+    position: absolute;
+    top: 15rem;
+    left: 5%;
+    color: #ffff;
+}
+
+
+
+.header-titulo :is(h1, p){
+    font-size: 2.5rem;
+}
+
+.header-titulo a{
+    display: inline-block;
+    position: relative;
+    top: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 125px;
+    height: 27px;
+    border: 2px solid ;
+    border-radius: 10px;
+}
+
+.header-titulo a:hover{
+    border-color: #04d361; 
+    box-shadow: 0px 8px 24px rgba(4, 211, 97, 0.15);
+}
+
+/* Menu lateral */
+.menu-hamburguer{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    z-index: 3;
+    transition: 1s;
+}
+
+.menu-hamburguer:hover{
+    color: #04d361;
+    cursor: pointer;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #29292e;
+    transition: 1s;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.menu-container{
+    position: relative;
+    display: flex;
+    top: 20rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-container ul li{
+    margin-top: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.menu-container ul li a{
+    color: #fff;
+    transition: 1s;
+}
+
+.menu-container ul li a:hover, .menu-container ul li a:active{
+    color: #04d361;
+    font-size: 1.9rem;
+}
+
+.close{
+    width: 0;
+    overflow: hidden;
+}
+
+.change-btn{
+   right: 2rem;
+}
+
+/* Projetos */
+
+#projetos {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+    background-color: #121214;
+    overflow: hidden;
+}
+
+.projetos-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; 
+}
+
+.projeto {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.projeto i{
+    position: relative;
+    top: 10px;
+    font-size: 1.8rem;
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-info {
+    padding: 20px;
+}
+
+.projeto-info a{
+    color: #000000;
+    transition: 0.8s;
+}
+
+.projeto-info a::after{
+    position: relative;
+    top: 5px;
+    content: 'Veja no GitHub!';
+}
+
+.projeto-info a:hover{
+    color: #03b855;
+}
+
+
+.projeto.active {
+    opacity: 1;
+    z-index: 3;
+    transform: translate3d(0, 0, 0) scale(1);
+    pointer-events: auto; 
+}
+
+.projeto.prev {
+    opacity: 0.7;
+    z-index: 2;
+    transform: translate3d(-70%, 0, -150px) scale(0.85); 
+}
+
+.projeto.next {
+    opacity: 0.7;
+    z-index: 2;
+    transform: translate3d(70%, 0, -150px) scale(0.85); 
+}
+
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover { background: #03b855; }
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 60px 20px;
+    background-color: #121214; 
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #a8a8b3;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Organiza os itens conforme o espaço da tela */
+    gap: 20px;
+}
+
+
+.skill-card {
+    background-color: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px); 
+    border-color: #04d361; 
+    box-shadow: 0px 8px 24px rgba(4, 211, 97, 0.15);
+}
+
+
+.skill-card i {
+    font-size: 2.5rem;
+}
+
+
+.skill-card span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e1e1e6;
+}
+
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: #121214; 
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Lado da Imagem */
+.about-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 50px; 
+    border: 3px solid #04d361; 
+    box-shadow: 0px 10px 30px rgba(4, 211, 97, 0.2);
+}
+
+
+.about-info {
+    flex: 1.5;
+}
+
+.about-tag {
+    color: #04d361;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.highlight-name {
+    color: #04d361; 
+}
+
+.about-text {
+    color: #a8a8b3;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.about-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #04d361;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #03b855;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #29292e;
+}
+
+.btn-secondary:hover {
+    background-color: #202024;
+    border-color: #a8a8b3;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; 
+        text-align: center;
+        gap: 35px;
+    }
+    
+    .about-img {
+        width: 220px;
+        height: 220px; 
+    }
+    
+    .about-actions {
+        justify-content: center; 
+    }
+}
+
+
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: #121214; 
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-tag {
+    color: #04d361;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-subtitle {
+    color: #a8a8b3;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+
+.contact-card {
+    background-color: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e1e1e6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.contact-card i {
+    font-size: 1.3rem;
+}
+
+
+.contact-card.whatsapp:hover {
+    border-color: #25d366;
+    color: #25d366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.15);
+    transform: translateY(-3px);
+}
+
+.contact-card.linkedin:hover {
+    border-color: #0077b5;
+    color: #0077b5;
+    box-shadow: 0 4px 20px rgba(0, 119, 181, 0.15);
+    transform: translateY(-3px);
+}
+
+.contact-card.instagram:hover {
+    border-color: #e1306c;
+    color: #e1306c;
+    box-shadow: 0 4px 20px rgba(225, 48, 108, 0.15);
+    transform: translateY(-3px);
+}
+
+.contact-card.email:hover {
+    border-color: #04d361; 
+    color: #04d361;
+    box-shadow: 0 4px 20px rgba(4, 211, 97, 0.15);
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER (RODAPÉ) --- */
+.main-footer {
+    background-color: #09090a; 
+    width: 100%;
+    padding: 30px 20px;
+    color: #a8a8b3;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    border-top: 1px solid #121214;
+}
+
+.footer-container p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+.footer-subtext {
+    font-size: 0.8rem !important;
+    color: #61616e;
+}
+
+
+@media (max-width: 600px) {
+    .contact-links {
+        flex-direction: column; 
+        align-items: stretch; 
+        padding: 0 20px;
+    }
+    
+    .contact-card {
+        justify-content: center;
+    }
+}
