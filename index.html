@@ -157,31 +157,59 @@
     <div class="contact-container">
         <span class="contact-tag">Conecte-se comigo</span>
         <h2>Vamos conversar?</h2>
-        <p class="contact-subtitle">Escolha a sua plataforma de preferência e envie uma mensagem.</p>
+        <p class="contact-subtitle">Escolha a sua plataforma de preferência ou envie uma mensagem direta abaixo.</p>
+        
         
         <div class="contact-links">
-            
             <a href="https://wa.me/5547997160630" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
             
-          
             <a href="https://www.linkedin.com/in/felipe-hoffmann-viana-8898b6329/" target="_blank" rel="noopener noreferrer" class="contact-card linkedin">
                 <i class="fab fa-linkedin-in"></i>
                 <span>LinkedIn</span>
             </a>
 
-         
             <a href="https://www.instagram.com/felipe_hoffmann___/" target="_blank" rel="noopener noreferrer" class="contact-card instagram">
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
             </a>
-            
-            
         </div>
+
+        <h1>Ou preencha o formulário abaixo!</h1>
+
+        <div class="contact-form-wrapper">
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
     </div>
 </section>
+
 
 
 <footer class="main-footer">
