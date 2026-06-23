@@ -64,7 +64,7 @@ header{
     box-shadow: 0px 8px 24px rgba(4, 211, 97, 0.15);
 }
 
-/* Menu lateral */
+
 .menu-hamburguer{
     position: fixed;
     top: 1rem;
@@ -124,7 +124,7 @@ nav{
    right: 2rem;
 }
 
-/* Projetos */
+
 
 #projetos {
     display: flex;
@@ -243,6 +243,111 @@ nav{
 .next-btn { right: 20px; }
 
 
+.education-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 20px;
+    background-color: #121214; 
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.education-tag {
+    color: #04d361; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+}
+
+.education-card {
+    background-color: #202024;
+    border: 1px solid #29292e;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+    transform: translateX(5px);
+    border-color: #04d361;
+    box-shadow: 0px 8px 24px rgba(4, 211, 97, 0.15);
+}
+
+.education-icon {
+    background-color: #121214;
+    border: 1px solid #29292e;
+    color: #04d361;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.education-date {
+    font-size: 0.85rem;
+    color: #04d361;
+    font-weight: 600;
+}
+
+.education-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.education-info h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #a8a8b3;
+}
+
+.education-info p {
+    font-size: 0.95rem;
+    color: #7c7c8a;
+    line-height: 1.5;
+    margin-top: 6px;
+}
+
+
+@media (max-width: 600px) {
+    .education-card {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .education-icon {
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+}
 
 .skills-section {
     display: flex;
@@ -276,7 +381,7 @@ nav{
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Organiza os itens conforme o espaço da tela */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
     gap: 20px;
 }
 
@@ -337,7 +442,7 @@ nav{
     gap: 50px;
 }
 
-/* Lado da Imagem */
+
 .about-img-container {
     flex: 1;
     display: flex;
@@ -385,7 +490,6 @@ nav{
     margin-bottom: 30px;
 }
 
-/* Botões */
 .about-actions {
     display: flex;
     gap: 15px;

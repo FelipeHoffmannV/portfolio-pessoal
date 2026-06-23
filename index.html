@@ -21,13 +21,14 @@
     </header>
     
     <div class="menu-hamburguer" id="btn-menu">
-        <i id="icon-menu" class="fa-solid fa-x"></i>
+        <i id="icon-menu" class="fa-solid fa-bars"></i>
     </div>        
-    <nav id="nav-menu">
+    <nav id="nav-menu" class="close">
         <div class="menu-container">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#formacao">Formação</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#resumo">Resumo Pessoal</a></li>
                 <li><a href="Felipe_Hoffmann_currículo (1).pdf" download="">Baixar CV</a></li>
@@ -71,13 +72,39 @@
                 <div class="projeto-info">
                     <h4>Sistema de login Flask</h4>
                     <p>Sistema que simula autenticação em um sistema Web, podendo cadastrar-se e logar, tendo também hash de senhas para segurança.</p>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/FelipeHoffmannV/Sistema_login_flask.git"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+
+
+<section id="formacao" class="education-section">
+    <div class="container">
+        <span class="education-tag">Trajetória Acadêmica</span>
+        <h2 class="section-title">Minha Formação</h2>
+        <p class="section-subtitle">Minhas qualificações, graduações e estudos na área de tecnologia.</p>
+        
+        <div class="education-timeline">
+            
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="education-info">
+                    <span class="education-date">2025 - Cursando</span>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <h4>Uninter</h4>
+                    <p>Foco em engenharia de software, modelagem de dados, arquitetura web e desenvolvimento de soluções escaláveis.</p>
+                </div>
+            </div>
+
+    </div>
+</section>
+
 
 
  <section id="skills" class="skills-section">
@@ -180,7 +207,7 @@
         <h1>Ou preencha o formulário abaixo!</h1>
 
         <div class="contact-form-wrapper">
-            <form action="#" method="POST" class="contact-form">
+            <form action="#" method="POST" class="contact-form" id="contact-form">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
@@ -188,7 +215,8 @@
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" 
+                required>
                 </div>
 
                 <div class="form-group">

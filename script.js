@@ -65,3 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCarousel();
 });
+
+const form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const dadosForm = new FormData(form);
+    const dadosObj = Object.fromEntries(dadosForm.entries());
+
+    window.alert('Mensagem enviada com sucesso!')
+
+    form.reset()
+})
